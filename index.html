@@ -1,0 +1,214 @@
+<!--User Story #1: I can see a title with id="title" in H1 sized text.
+
+User Story #2: I can see a short explanation with id="description" in P sized text.
+
+User Story #3: I can see a form with id="survey-form".
+
+User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+
+User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+
+User Story #7: Inside the form, I can enter a number in a field with id="number".
+
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+
+User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+
+User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+
+User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+
+User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+
+User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+
+User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survet From</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">Web Technologies Survey</h1>
+        <h2 id="description">
+          It is a survey to know the technologies used by web developers
+        </h2>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label for="name" name="name" id="name-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" name="email" id="email-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number" name="number" id="number-label">Age</label>
+          <input
+            type="number"
+            class="form-control"
+            id="number"
+            min="10"
+            max="90"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>What is your current role?</p>
+          <select name="role" id="dropdown" class="form-control" required>
+            <option disabled selected>Select the current role</option>
+            <option value="student">Student</option>
+            <option value="intern">Intern</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+            <option value="job">Full Time Job</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>How long have you been programming?</p>
+          <label>
+            <input
+              name="programminTime"
+              type="radio"
+              value="1-3y"
+              class="input-radio"
+              checked
+            />1 to 3 years
+          </label>
+          <label>
+            <input
+              name="programminTime"
+              type="radio"
+              value="1-3y"
+              class="input-radio"
+            />3 to 5 years
+          </label>
+          <label>
+            <input
+              name="programminTime"
+              type="radio"
+              value="1-3y"
+              class="input-radio"
+            />more than 5 years
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p>
+            What technologies do you use?<br>
+            <span>(check all that apply)</span>
+          </p>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="html"
+              class="input-checkbox"
+            />HTML
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="css"
+              class="input-checkbox"
+            />CSS
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="javaScript"
+              class="input-checkbox"
+            />JavaScript
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="php"
+              class="input-checkbox"
+            />PHP
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="python"
+              class="input-checkbox"
+            />Phyton
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="angular"
+              class="input-checkbox"
+            />Angular.js
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="react"
+              class="input-checkbox"
+            />React.js
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="used"
+              value="node"
+              class="input-checkbox"
+            />Node.js
+          </label>
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            name="comment"
+            id="comments"
+            class="input-textarea"
+            placeholder="Enter your comments here..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <input
+            type="submit"
+            class="submit-button"
+            id="name"
+            placeholder="Enter your name"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
