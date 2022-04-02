@@ -128,7 +128,7 @@ input, button, select, textarea {
     background-color: #307e4c;
 }
 
-@media(min-width:480px){
+@media(min-width:800px){
     .container{
         display: flex;
         flex-direction: column;
